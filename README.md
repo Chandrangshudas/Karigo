@@ -25,6 +25,10 @@ For a different API host, set this before loading `script.js`:
 <script>window.KARIGO_API_BASE_URL = "https://your-api.example.com";</script>
 ```
 
+When deploying, set `CORS_ORIGINS` in the backend host to a comma-separated
+list that includes the deployed frontend URL, for example
+`https://your-site.netlify.app`.
+
 ## Connected flow
 
 1. Register/login as an artisan, upload an image, and create a product.
