@@ -1,0 +1,9 @@
+# Secrets and local environments
+KariGo-backend/.env
+KariGo-backend/venv/
+KariGo-backend/__pycache__/
+KariGo-backend/app/**/__pycache__/
+KariGo-backend/*.db
+
+# Frontend editor/runtime files
+karigo/.vscode/

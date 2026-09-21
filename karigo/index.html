@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#034A54">
+    <title>Karigo — Where Craft Meets Opportunity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <!-- =========================================================
+       KARIGO FRONTEND
+       Pages are switched by JavaScript. You can add more pages
+       later by creating another .page section and a route.
+       ========================================================= -->
+
+    <div id="app">
+
+        <!-- ==================== PAGE 1 ==================== -->
+        <section class="page intro-page active" id="introPage">
+            <div class="intro-glow glow-one"></div>
+            <div class="intro-glow glow-two"></div>
+
+            <div class="intro-content">
+                <div class="intro-logo-wrap">
+                    <img src="karigo-logo.png" alt="Karigo logo" class="intro-logo">
+                </div>
+
+
+                <div class="intro-band">
+                    <span class="kari">KARI</span><SPAN class="go">GO</SPAN>
+                </div>
+                <h1>Where Craft Meets<br><span>Opportunity.</span></h1>
+
+                <button class="continue-btn" data-go="rolePage" aria-label="Continue to Karigo">
+                    <span>Continue</span>
+                    <span class="arrow">→</span>
+                </button>
+
+                <p class="click-hint">Tap anywhere to continue</p>
+            </div>
+        </section>
+
+
+        <!-- ==================== PAGE 2 ==================== -->
+        <section class="page role-page" id="rolePage">
+            <header class="topbar">
+                <button class="brand" data-go="introPage" aria-label="Go to home">
+                    <img src="karigo-logo.png" alt="Karigo">
+                    <span>KARIGO</span>
+                </button>
+            </header>
+
+            <main class="role-main">
+                <div class="section-heading">
+                    <p class="eyebrow">WELCOME TO KARIGO</p>
+                    <h2>LOGIN - AS ?</h2>
+                    <p>Choose your journey to get started.</p>
+                </div>
+
+                <div class="role-grid">
+                    <button class="role-card artisan-card" data-go="sellerLoginPage">
+                        <div class="seller-logo">
+                            <img src="seller_logo.png" alt="" class="seller-logo-img">
+                        </div>
+                        <div class="role-copy">
+                            <span class="role-label">FOR ARTISANS</span>
+                            <h3> ARTISANS / SELLER</h3>
+                            <p>Take Your Craft to the World.</p>
+                        </div>
+                        <span class="card-arrow">→</span>
+                    </button>
+
+                    <button class="role-card buyer-card" data-go="buyerLoginPage">
+                        <div class="buyer-logo">
+                            <img src="buyer_logo.png" alt="" class="buyer-logo-img">
+                        </div>
+                        <div class="role-copy">
+                            <span class="role-label">FOR BUYERS</span>
+                            <h3>BUYER / CUSTOMER</h3>
+                            <p>Discover Crafts. Make Your Collection Unique.</p>
+                        </div>
+                        <span class="card-arrow">→</span>
+                    </button>
+                </div>
+            </main>
+        </section>
+
+
+        <!-- ==================== PAGE 3 ==================== -->
+        <section class="page auth-page" id="sellerLoginPage">
+            <header class="topbar">
+                <button class="brand" data-go="rolePage" aria-label="Back to role selection">
+                    <img src="karigo-logo.png" alt="Karigo">
+                    <span>KARIGO</span>
+                </button>
+            </header>
+
+            <main class="auth-main">
+                <div class="auth-card">
+                    <div class="auth-icon seller-icon">
+                        <span></span>
+                    </div>
+
+                    <p class="eyebrow">SELLER LOGIN</p>
+                    <h2>Take Your Craft<br><span>to the World.</span></h2>
+                    <p class="welcome">Welcome, Artisan <span>👋</span></p>
+
+                    <form class="auth-form" id="sellerLoginForm">
+
+                        <label for="sellerEmail">📧 Email</label>
+
+                        <input id="sellerEmail" class="full-input" type="email" placeholder="Enter your email" required>
+
+                        <label for="sellerPassword">🔒 Password</label>
+
+                        <div class="password-wrap">
+
+                            <input id="sellerPassword" type="password" placeholder="Enter your password" required>
+
+                            <button type="button" class="eye-btn" data-toggle-password="sellerPassword">
+                                Show
+                            </button>
+
+                        </div>
+
+                        <button class="primary-btn" type="submit">
+                            Continue <span>→</span>
+                        </button>
+
+                    </form>
+
+                    <div class="auth-footer">
+                        New to Karigo?
+                        <button data-go="sellerRegisterPage">Create Seller Account</button>
+                    </div>
+
+                    <button class="back-link" data-go="rolePage">← Choose another account type</button>
+                </div>
+            </main>
+        </section>
+
+
+        <!-- ==================== PAGE 4 ==================== -->
+        <section class="page auth-page" id="buyerLoginPage">
+            <header class="topbar">
+                <button class="brand" data-go="rolePage" aria-label="Back to role selection">
+                    <img src="karigo-logo.png" alt="Karigo">
+                    <span>KARIGO</span>
+                </button>
+            </header>
+
+            <main class="auth-main">
+                <div class="auth-card">
+                    <div class="auth-icon buyer-icon">
+                        <span></span>
+                    </div>
+
+                    <p class="eyebrow">BUYER LOGIN</p>
+                    <h2>Discover Craft.<br><span>Stand Out.</span></h2>
+                    <p class="welcome">Welcome back <span>👋</span></p>
+
+                    <form class="auth-form" id="buyerLoginForm">
+                        <label for="buyerIdentifier">📱 Mobile Number / Email</label>
+                        <input id="buyerIdentifier" class="full-input" type="text" placeholder="Mobile number or email"
+                            required>
+
+                        <label for="buyerPassword">🔒 Password</label>
+                        <div class="password-wrap">
+                            <input id="buyerPassword" type="password" placeholder="Enter password" required>
+                            <button type="button" class="eye-btn" data-toggle-password="buyerPassword">Show</button>
+                        </div>
+
+                        <div class="forgot-row">
+                            <button type="button" class="forgot-btn" id="forgotPassword">Forgot Password?</button>
+                        </div>
+
+                        <button class="primary-btn" type="submit">
+                            Login <span>→</span>
+                        </button>
+                    </form>
+
+                    <div class="auth-footer">
+                        New Buyer?
+                        <button data-go="buyerRegisterPage">Create Account</button>
+                    </div>
+
+                    <button class="back-link" data-go="rolePage">← Choose another account type</button>
+                </div>
+            </main>
+        </section>
+
+
+        <!-- ==================== PAGE 5 ==================== -->
+        <section class="page register-page" id="sellerRegisterPage">
+            <header class="topbar">
+                <button class="brand" data-go="sellerLoginPage">
+                    <img src="karigo-logo.png" alt="Karigo">
+                    <span>KARIGO</span>
+                </button>
+            </header>
+
+            <main class="register-main">
+                <div class="register-card">
+                    <div class="progress"><span style="width: 20%"></span></div>
+                    <p class="eyebrow">SELLER REGISTRATION</p>
+                    <h2>Let's get to know<br><span>your craft.</span></h2>
+                    <p class="subtext">Start with the basics. You can complete the rest of your profile later.</p>
+
+                    <form id="sellerRegisterForm" class="register-form">
+                        <div class="field">
+                            <label for="sellerName">Name</label>
+                            <input id="sellerName" type="text" placeholder="Your full name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="sellerRegisterEmail">Email</label>
+                            <input id="sellerRegisterEmail" type="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="newSellerPassword">Password</label>
+                            <div class="password-wrap">
+                                <input id="newSellerPassword" type="password" placeholder="Create a password" required>
+                                <button type="button" class="eye-btn"
+                                    data-toggle-password="newSellerPassword">Show</button>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="artisanName">Business / Artisan Name</label>
+                            <input id="artisanName" type="text" placeholder="Your shop or artisan name" required>
+                        </div>
+
+                        <div class="two-fields">
+                            <div class="field">
+                                <label for="sellerLocation">Location</label>
+                                <input id="sellerLocation" type="text" placeholder="City / District" required>
+                            </div>
+                            <div class="field">
+                                <label for="craftCategory">Craft Category</label>
+                                <select id="craftCategory" required>
+                                    <option value="">Select</option>
+                                    <option>Handloom & Weaving</option>
+                                    <option>Pottery & Ceramics</option>
+                                    <option>Wood Craft</option>
+                                    <option>Metal Craft</option>
+                                    <option>Textiles</option>
+                                    <option>Jewellery</option>
+                                    <option>Bamboo & Cane</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="sellerLanguages">Languages</label>
+                            <input id="sellerLanguages" type="text" placeholder="e.g. Bengali, Hindi, English">
+                        </div>
+
+                        <div class="later-box">
+                            <span>✓</span>
+                            <div>
+                                <strong>Bank / payment details can be added later.</strong>
+                                <p>We keep the first step simple so you can start quickly.</p>
+                            </div>
+                        </div>
+
+                        <button class="primary-btn" type="submit">Create Seller Profile →</button>
+                    </form>
+                </div>
+            </main>
+        </section>
+
+
+        <!-- ==================== PAGE 6 ==================== -->
+        <section class="page register-page" id="buyerRegisterPage">
+            <header class="topbar">
+                <button class="brand" data-go="buyerLoginPage">
+                    <img src="karigo-logo.png" alt="Karigo">
+                    <span>KARIGO</span>
+                </button>
+            </header>
+
+            <main class="register-main">
+                <div class="register-card">
+                    <div class="progress"><span style="width: 20%"></span></div>
+                    <p class="eyebrow">BUYER REGISTRATION</p>
+                    <h2>Welcome to your<br><span>new collection.</span></h2>
+                    <p class="subtext">Create your account and discover unique craft products.</p>
+
+                    <form id="buyerRegisterForm" class="register-form">
+                        <div class="field">
+                            <label for="buyerName">Name</label>
+                            <input id="buyerName" type="text" placeholder="Your full name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="buyerMobile">Mobile Number</label>
+                            <input id="buyerMobile" type="tel" inputmode="numeric" maxlength="10"
+                                placeholder="10-digit mobile number" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="buyerEmail">Email</label>
+                            <input id="buyerEmail" type="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="newBuyerPassword">Password</label>
+                            <div class="password-wrap">
+                                <input id="newBuyerPassword" type="password" placeholder="Create a password" required>
+                                <button type="button" class="eye-btn"
+                                    data-toggle-password="newBuyerPassword">Show</button>
+                            </div>
+                        </div>
+
+                        <button class="primary-btn" type="submit">Create Buyer Account →</button>
+                    </form>
+                </div>
+            </main>
+        </section>
+
+
+        <!-- ==================== FUTURE DASHBOARDS ==================== -->
+        <!-- Replace these placeholders later with the real dashboards. -->
+
+        <section class="page dashboard-placeholder" id="sellerDashboardPage">
+            <header class="topbar">
+                <!-- <div class="brand">
+          <img src="karigo-logo.png" alt="Karigo">
+          <span>KARIGO</span>
+        </div> -->
+            </header>
+            <main class="placeholder-main">
+                <div class="placeholder-card">
+                    <span class="placeholder-icon">✦</span>
+                    <p class="eyebrow">SELLER SPACE</p>
+                    <h2>Welcome to your<br><span>Karigo workshop.</span></h2>
+                    <p>Your Seller Dashboard will go here.</p>
+                    <!-- <button class="secondary-btn" data-go="rolePage">Back to start</button> -->
+                </div>
+            </main>
+        </section>
+
+        <section class="page dashboard-placeholder" id="buyerDashboardPage">
+            <header class="topbar">
+                <!-- <div class="brand">
+          <img src="karigo-logo.png" alt="Karigo">
+          <span>KARIGO</span>
+        </div> -->
+            </header>
+            <main class="placeholder-main">
+                <div class="placeholder-card">
+                    <span class="placeholder-icon">◇</span>
+                    <p class="eyebrow">BUYER SPACE</p>
+                    <h2>Welcome to your<br><span>Karigo collection.</span></h2>
+                    <p>Your Buyer Dashboard will go here.</p>
+                    <!-- <button class="secondary-btn" data-go="rolePage">Back to start</button> -->
+                </div>
+            </main>
+        </section>
+
+
+        <!-- =====================================================
+     SELLER WORKSHOP HOME
+     ===================================================== -->
+
+        <section class="page seller-workshop-page" id="sellerHomePage">
+
+            <!-- TOP NAVIGATION -->
+            <header class="seller-topbar">
+
+                <!-- LEFT: KARIGO LOGO -->
+                <button class="seller-brand" data-go="rolePage">
+                    <!-- introPage -->
+                    <!-- sellerDashboardPage -->
+                    <img src="karigo-logo.png" alt="Karigo Logo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+
+                <!-- RIGHT: ACCOUNT + GALLERY -->
+                <div class="seller-actions">
+
+                    <!-- ACCOUNT -->
+                    <button class="seller-action-btn" data-go="sellerAccountPage">
+
+                        <img src="account_logo.png" alt="Karigo Account">
+
+                        <span>Account</span>
+
+                    </button>
+
+
+                    <!-- GALLERY -->
+                    <button class="seller-action-btn" data-go="sellerGalleryPage">
+
+                        <img src="gallery_logo.png" alt="My Gallery">
+
+                        <span>My Gallery</span>
+
+                    </button>
+
+                    <button class="seller-action-btn" data-go="sellerQuotationsPage">
+
+                        <span class="seller-request-icon">↗</span>
+
+                        <span>Requests</span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- MAIN WORKSHOP -->
+            <main class="workshop-main">
+
+                <div class="workshop-content">
+
+                    <p class="workshop-small-title">
+                        YOUR KARIGO SPACE
+                    </p>
+
+                    <h1>
+                        KARIGO<br>
+                        <span>WORKSHOP</span>
+                    </h1>
+
+                    <p class="workshop-description">
+                        Turn your craft into opportunity.
+                        Add your handmade products and
+                        let buyers discover your work.
+                    </p>
+
+
+                    <!-- ADD ITEMS -->
+                    <button class="add-items-btn" data-go="sellerAddItemPage">
+
+                        <span class="plus-symbol">+</span>
+
+                        <span>Add Items</span>
+
+                    </button>
+
+
+                    <!-- SMALL QUICK INFO -->
+                    <div class="workshop-info">
+
+                        <div>
+                            <strong id="productCount">0</strong>
+                            <span>Products</span>
+                        </div>
+
+                        <div>
+                            <strong id="availableCount">0</strong>
+                            <span>Available</span>
+                        </div>
+
+                        <div>
+                            <strong id="totalStock">0</strong>
+                            <span>Items in Stock</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </section>
+
+
+        <!-- =====================================================
+     SELLER QUOTATION REQUESTS
+     ===================================================== -->
+
+        <section class="page seller-quotations-page" id="sellerQuotationsPage">
+
+            <header class="seller-topbar">
+                <button class="seller-brand" data-go="sellerHomePage">
+                    <img src="karigo-logo.png" alt="Karigo Logo">
+                    <span>KARIGO</span>
+                </button>
+
+                <div class="page-title">
+                    <span>BUYER REQUESTS</span>
+                </div>
+            </header>
+
+            <main class="seller-quotations-main">
+                <div class="seller-quotations-heading">
+                    <p class="workshop-small-title">QUOTATION REQUESTS</p>
+                    <h1>Review buyer <span>requests</span></h1>
+                    <p>Accept a request to let the buyer complete their order.</p>
+                </div>
+
+                <div id="sellerQuotationList" class="seller-quotation-list" aria-live="polite">
+                    <p class="seller-quotation-loading">Loading requests...</p>
+                </div>
+            </main>
+
+        </section>
+
+
+        <!-- =====================================================
+     SELLER ACCOUNT PAGE
+     ===================================================== -->
+
+        <section class="page seller-account-page" id="sellerAccountPage">
+
+            <header class="seller-topbar">
+
+                <button class="seller-brand" data-go="sellerHomePage">
+
+                    <img src="karigo-logo.png" alt="Karigo Logo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+                <div class="page-title">
+                    <span>MY ACCOUNT</span>
+                </div>
+
+            </header>
+
+
+            <main class="account-main">
+
+                <div class="account-card">
+
+                    <div class="account-heading">
+
+                        <div class="account-heading-icon">
+                            👤
+                        </div>
+
+                        <div>
+                            <p class="workshop-small-title">
+                                SELLER PROFILE
+                            </p>
+
+                            <h1>
+                                Your Business
+                                <span>Profile</span>
+                            </h1>
+
+                            <p>
+                                Tell us a little about you and your craft.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="sellerAccountForm">
+
+
+                        <!-- ================= PERSONAL DETAILS ================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-title">
+                                <span>01</span>
+                                Personal Details
+                            </div>
+
+
+                            <div class="form-grid">
+
+                                <div class="form-group">
+
+                                    <label>Full Name</label>
+
+                                    <input type="text" id="accountName" placeholder="Enter your full name" required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>Mobile Number</label>
+
+                                    <input type="tel" id="accountMobile" placeholder="10-digit mobile number"
+                                        maxlength="10" required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>Email Address</label>
+
+                                    <input type="email" id="accountEmail" placeholder="Optional">
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>Preferred Language</label>
+
+                                    <select id="accountLanguage">
+
+                                        <option value="">
+                                            Select language
+                                        </option>
+
+                                        <option>Hindi</option>
+                                        <option>Bengali</option>
+                                        <option>English</option>
+                                        <option>Marathi</option>
+                                        <option>Gujarati</option>
+                                        <option>Tamil</option>
+                                        <option>Telugu</option>
+                                        <option>Kannada</option>
+                                        <option>Odia</option>
+                                        <option>Other</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= BUSINESS DETAILS ================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-title">
+                                <span>02</span>
+                                Craft & Business
+                            </div>
+
+
+                            <div class="form-grid">
+
+                                <div class="form-group">
+
+                                    <label>Business / Artisan Name</label>
+
+                                    <input type="text" id="businessName" placeholder="Example: Maa Durga Handicrafts"
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>Craft Category</label>
+
+                                    <select id="businessCategory" required>
+
+                                        <option value="">
+                                            Select craft
+                                        </option>
+
+                                        <option>Pottery & Ceramics</option>
+                                        <option>Handloom & Weaving</option>
+                                        <option>Textiles</option>
+                                        <option>Wood Craft</option>
+                                        <option>Metal Craft</option>
+                                        <option>Jewellery</option>
+                                        <option>Bamboo & Cane</option>
+                                        <option>Painting</option>
+                                        <option>Leather Craft</option>
+                                        <option>Other</option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>Years of Experience</label>
+
+                                    <input type="number" min="0" placeholder="Example: 12">
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>Number of People Working</label>
+
+                                    <input type="number" min="1" placeholder="Example: 4">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= LOCATION ================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-title">
+                                <span>03</span>
+                                Location
+                            </div>
+
+
+                            <div class="form-grid">
+
+                                <div class="form-group">
+
+                                    <label>State</label>
+
+                                    <input type="text" placeholder="Example: West Bengal" required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>District</label>
+
+                                    <input type="text" placeholder="Example: Bankura" required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>Village / City</label>
+
+                                    <input type="text" placeholder="Your village or city" required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>PIN Code</label>
+
+                                    <input type="text" maxlength="6" placeholder="6-digit PIN">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= BUSINESS REGISTRATION ================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-title">
+                                <span>04</span>
+                                Business Verification
+                            </div>
+
+
+                            <div class="form-grid">
+
+                                <div class="form-group">
+
+                                    <label>Udyam / MSME Number</label>
+
+                                    <input type="text" placeholder="Optional">
+
+                                    <small>
+                                        You can add this later if you don't have it now.
+                                    </small>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>GSTIN</label>
+
+                                    <input type="text" placeholder="Optional / if applicable">
+
+                                    <small>
+                                        Not required to complete your basic profile.
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= PAYMENT ================= -->
+
+                        <div class="later-payment-box">
+
+                            <div class="later-payment-icon">
+                                ₹
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Bank & Payment Details
+                                </strong>
+
+                                <p>
+                                    You don't need to add payment details right now.
+                                    They can be completed later when you are ready
+                                    to receive payments.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <div class="account-submit">
+
+                            <button type="submit" class="save-account-btn">
+
+                                Save My Details
+                                <span>→</span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </main>
+
+        </section>
+
+
+        <!-- =====================================================
+     SELLER GALLERY
+     ===================================================== -->
+
+        <section class="page seller-gallery-page" id="sellerGalleryPage">
+
+            <header class="seller-topbar">
+
+                <button class="seller-brand" data-go="sellerHomePage">
+
+                    <img src="karigo-logo.png" alt="Karigo Logo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+
+                <div class="page-title">
+                    <span>MY GALLERY</span>
+                </div>
+
+            </header>
+
+
+            <main class="gallery-main">
+
+                <div class="gallery-header">
+
+                    <div>
+
+                        <p class="workshop-small-title">
+                            YOUR PRODUCTS
+                        </p>
+
+                        <h1>
+                            My <span>Gallery</span>
+                        </h1>
+
+                        <p>
+                            Manage your products and available stock.
+                        </p>
+
+                    </div>
+
+
+                    <button class="gallery-add-btn" data-go="sellerAddItemPage">
+
+                        + Add Item
+
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUCT TABLE -->
+
+                <div class="product-table-container">
+
+                    <div class="product-table-header">
+
+                        <span>PRODUCT</span>
+                        <span>PRICE</span>
+                        <span>STOCK</span>
+                        <span>STATUS</span>
+                        <span>ACTION</span>
+
+                    </div>
+
+
+                    <div id="productList">
+
+                        <!-- PRODUCT 1 -->
+
+                        <div class="product-row" data-stock="12">
+
+                            <div class="product-info">
+
+                                <div class="product-image pot-image">
+                                    🏺
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Terracotta Decorative Pot
+                                    </strong>
+
+                                    <small>
+                                        Pottery & Ceramics
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="product-price">
+                                ₹450
+                            </div>
+
+
+                            <div class="stock-control">
+
+                                <button class="stock-minus">
+                                    −
+                                </button>
+
+                                <strong class="stock-value">
+                                    12
+                                </strong>
+
+                                <button class="stock-plus">
+                                    +
+                                </button>
+
+                            </div>
+
+
+                            <div>
+
+                                <span class="stock-status available">
+                                    Available
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <button class="delete-product" title="Delete product">
+
+                                    🗑
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRODUCT 2 -->
+
+                        <div class="product-row" data-stock="5">
+
+                            <div class="product-info">
+
+                                <div class="product-image textile-image">
+                                    🧶
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Handwoven Cotton Saree
+                                    </strong>
+
+                                    <small>
+                                        Handloom & Weaving
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="product-price">
+                                ₹1,200
+                            </div>
+
+
+                            <div class="stock-control">
+
+                                <button class="stock-minus">
+                                    −
+                                </button>
+
+                                <strong class="stock-value">
+                                    5
+                                </strong>
+
+                                <button class="stock-plus">
+                                    +
+                                </button>
+
+                            </div>
+
+
+                            <div>
+
+                                <span class="stock-status available">
+                                    Available
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <button class="delete-product" title="Delete product">
+
+                                    🗑
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRODUCT 3 -->
+
+                        <div class="product-row" data-stock="20">
+
+                            <div class="product-info">
+
+                                <div class="product-image basket-image">
+                                    🧺
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Bamboo Storage Basket
+                                    </strong>
+
+                                    <small>
+                                        Bamboo & Cane
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="product-price">
+                                ₹350
+                            </div>
+
+
+                            <div class="stock-control">
+
+                                <button class="stock-minus">
+                                    −
+                                </button>
+
+                                <strong class="stock-value">
+                                    20
+                                </strong>
+
+                                <button class="stock-plus">
+                                    +
+                                </button>
+
+                            </div>
+
+
+                            <div>
+
+                                <span class="stock-status available">
+                                    Available
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <button class="delete-product" title="Delete product">
+
+                                    🗑
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div class="gallery-empty" id="galleryEmpty">
+
+                    <div>✦</div>
+
+                    <h3>
+                        Your gallery is empty
+                    </h3>
+
+                    <p>
+                        Add your first craft product to start selling.
+                    </p>
+
+                    <button data-go="sellerAddItemPage">
+                        + Add Your First Item
+                    </button>
+
+                </div>
+
+            </main>
+
+        </section>
+
+
+        <!-- =====================================================
+     ADD PRODUCT PAGE
+     ===================================================== -->
+
+        <section class="page add-product-page" id="sellerAddItemPage">
+
+            <!-- TOP BAR -->
+
+            <header class="seller-topbar">
+
+                <button class="seller-brand" data-go="sellerHomePage">
+
+                    <img src="karigo-logo.png" alt="Karigo Logo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+            </header>
+
+
+            <!-- MAIN CONTENT -->
+
+            <main class="add-product-main">
+
+                <div class="add-product-wrapper">
+
+                    <div class="add-product-heading">
+
+                        <p class="workshop-small-title">
+                            KARIGO WORKSHOP
+                        </p>
+
+                        <h1>
+                            Add Your <span>Product</span>
+                        </h1>
+
+                        <p>
+                            Show us your craft. Karigo will help turn it
+                            into a market-ready product listing.
+                        </p>
+
+                    </div>
+
+
+                    <!-- PRODUCT INPUT CARD -->
+
+                    <div class="product-input-card">
+
+
+                        <!-- ================= IMAGE ================= -->
+
+                        <div class="input-block">
+
+                            <div class="input-block-heading">
+
+                                <div class="input-number">
+                                    01
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Add Your Product Image
+                                    </h3>
+
+                                    <p>
+                                        Take a clear photo of your craft.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- IMAGE PREVIEW -->
+
+                            <div class="product-photo-area" id="productPhotoArea">
+
+                                <div class="photo-placeholder" id="photoPlaceholder">
+
+                                    <div class="photo-icon">
+                                        📷
+                                    </div>
+
+                                    <strong>
+                                        No product image yet
+                                    </strong>
+
+                                    <span>
+                                        Take a photo of your craft
+                                    </span>
+
+                                </div>
+
+
+                                <img id="productImagePreview" class="product-image-preview" alt="Product Preview">
+
+                            </div>
+
+
+                            <!-- CAMERA BUTTON -->
+
+                            <button class="camera-btn" id="openCameraBtn">
+
+                                <span>📷</span>
+
+                                Take / Upload Photo
+
+                            </button>
+
+
+                            <!-- Hidden camera input -->
+
+                            <input type="file" id="productImageInput" accept="image/*" capture="environment" hidden>
+
+                        </div>
+
+
+                        <div class="input-divider"></div>
+
+
+                        <!-- ================= VOICE ================= -->
+
+                        <div class="input-block">
+
+                            <div class="input-block-heading">
+
+                                <div class="input-number">
+                                    02
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Tell Us About Your Product
+                                    </h3>
+
+                                    <p>
+                                        Speak naturally in your own language.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- VOICE RECORDER -->
+
+                            <div class="voice-recorder">
+
+                                <div class="voice-animation" id="voiceAnimation">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <div class="voice-status" id="voiceStatus">
+
+                                    Ready to record
+
+                                </div>
+
+
+                                <div class="record-time" id="recordTime">
+
+                                    00:00
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- RECORD BUTTON -->
+
+                            <button class="record-btn" id="recordBtn">
+
+                                <span id="recordIcon">
+                                    🎙
+                                </span>
+
+                                <span id="recordText">
+                                    Start Recording
+                                </span>
+
+                            </button>
+
+
+                            <!-- TRANSCRIPT -->
+
+                            <div class="voice-result" id="voiceResult">
+
+                                <div class="voice-result-title">
+                                    What Karigo heard
+                                </div>
+
+                                <p id="transcriptText">
+                                    Your spoken description will appear here.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= SUBMIT ================= -->
+
+                        <div class="product-submit-area">
+
+                            <p>
+                                Your image and voice description will be
+                                processed to create your product listing.
+                            </p>
+
+
+                            <button class="process-product-btn" id="processProductBtn">
+
+                                <span>
+                                    Create My Product
+                                </span>
+
+                                <span>
+                                    →
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     AI PRODUCT PREVIEW PAGE
+     ===================================================== -->
+
+        <section class="page product-preview-page" id="sellerProductPreviewPage">
+
+
+            <!-- TOP BAR -->
+
+            <header class="seller-topbar">
+
+                <button class="seller-brand" data-go="sellerAddItemPage">
+
+                    <img src="karigo-logo.png" alt="Karigo Logo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+            </header>
+
+
+            <main class="preview-main">
+
+                <div class="preview-wrapper">
+
+
+                    <!-- HEADING -->
+
+                    <div class="preview-heading">
+
+                        <p class="workshop-small-title">
+                            KARIGO AI
+                        </p>
+
+                        <h1>
+                            Your Product <span>Preview</span>
+                        </h1>
+
+                        <p>
+                            We created this listing from your photo
+                            and voice description.
+                        </p>
+
+                    </div>
+
+
+                    <!-- PREVIEW CARD -->
+
+                    <div class="ecommerce-preview-card">
+
+
+                        <!-- PRODUCT IMAGE -->
+
+                        <div class="preview-image-section">
+
+                            <img id="aiProductImage" alt="AI Product Image">
+
+                            <div class="ai-badge">
+                                ✦ AI READY
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRODUCT DETAILS -->
+
+                        <div class="preview-details">
+
+                            <div class="ai-generated-label">
+                                KARIGO PRODUCT LISTING
+                            </div>
+
+
+                            <!-- NAME -->
+
+                            <div class="preview-field">
+
+                                <label>
+                                    PRODUCT NAME
+                                </label>
+
+                                <input id="previewProductName" type="text" value="Handcrafted Artisan Product">
+
+                            </div>
+
+
+                            <!-- CATEGORY -->
+
+                            <div class="preview-field">
+
+                                <label>
+                                    CATEGORY
+                                </label>
+
+                                <select id="previewCategory">
+
+                                    <option>
+                                        Handicrafts
+                                    </option>
+
+                                    <option>
+                                        Pottery & Ceramics
+                                    </option>
+
+                                    <option>
+                                        Handloom & Textiles
+                                    </option>
+
+                                    <option>
+                                        Bamboo & Cane
+                                    </option>
+
+                                    <option>
+                                        Wood Craft
+                                    </option>
+
+                                    <option>
+                                        Jewellery
+                                    </option>
+
+                                    <option>
+                                        Home Decor
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- DESCRIPTION -->
+
+                            <div class="preview-field">
+
+                                <label>
+                                    PRODUCT DESCRIPTION
+                                </label>
+
+                                <textarea id="previewDescription"
+                                    rows="5">Beautifully handcrafted artisan product made with traditional craftsmanship. Each piece reflects the skill and creativity of the maker.</textarea>
+
+                            </div>
+
+
+                            <!-- PRICE -->
+
+                            <div class="preview-price-row">
+
+                                <div class="preview-field">
+
+                                    <label>
+                                        SUGGESTED PRICE
+                                    </label>
+
+                                    <div class="price-input">
+
+                                        <span>₹</span>
+
+                                        <input id="previewPrice" type="number" value="500">
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="preview-field">
+
+                                    <label>
+                                        AVAILABLE QUANTITY
+                                    </label>
+
+                                    <input id="previewQuantity" type="number" min="1" value="1">
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- AI NOTE -->
+
+                            <div class="ai-note">
+
+                                <span>✦</span>
+
+                                <p>
+                                    Karigo AI created this listing for you.
+                                    You can change anything before publishing.
+                                </p>
+
+                            </div>
+
+
+                            <!-- ACTIONS -->
+
+                            <div class="preview-actions">
+
+                                <button class="edit-product-btn" id="editProductBtn">
+
+                                    ← Make Changes
+
+                                </button>
+
+
+                                <button class="confirm-product-btn" id="confirmProductBtn">
+
+                                    Confirm & Add to Gallery
+                                    <span>✓</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </section>
+
+
+
+
+
+
+
+        <!-- ==================== BUYER HOME PAGE ==================== -->
+
+        <!-- =====================================================
+     BUYER MARKETPLACE
+     ===================================================== -->
+
+        <section class="page buyer-marketplace-page" id="buyerHomePage">
+
+            <!-- TOP NAVIGATION -->
+
+            <header class="buyer-topbar">
+
+                <!-- LEFT -->
+                <button class="buyer-brand" data-go="rolePage">
+
+                    <img src="karigo-logo.png" alt="Karigo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+
+                <!-- SEARCH -->
+                <div class="buyer-search">
+
+                    <span>⌕</span>
+
+                    <input type="text" id="productSearch" placeholder="Search for crafts, products...">
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="buyer-actions">
+
+                    <button class="buyer-action-btn" data-go="buyerAccountPage">
+
+                        <span class="action-icon">👤</span>
+                        <span>Account</span>
+
+                    </button>
+
+
+                    <button class="buyer-action-btn" data-go="buyerCartPage">
+
+                        <span class="action-icon">
+                            🛒
+                            <b id="cartCount">0</b>
+                        </span>
+
+                        <span>Cart</span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+         MARKETPLACE CONTENT
+         ================================================= -->
+
+            <main class="marketplace-main">
+
+
+                <!-- HERO -->
+
+                <section class="marketplace-hero">
+
+                    <div>
+
+                        <p class="marketplace-eyebrow">
+                            DISCOVER HANDMADE INDIA
+                        </p>
+
+                        <h1>
+                            Discover Craft.<br>
+                            <span>Make It Yours.</span>
+                        </h1>
+
+                        <p>
+                            Explore unique handmade products directly
+                            from skilled artisans.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+             CATEGORIES
+             ================================================= -->
+
+                <section class="category-section">
+
+                    <div class="section-title-row">
+
+                        <div>
+
+                            <p class="marketplace-eyebrow">
+                                EXPLORE
+                            </p>
+
+                            <h2>
+                                Shop by Category
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-list">
+
+                        <button class="category-btn active" data-category="all">
+                            ✦
+                            <span>All Crafts</span>
+                        </button>
+
+                        <button class="category-btn" data-category="pottery">
+                            🏺
+                            <span>Pottery</span>
+                        </button>
+
+                        <button class="category-btn" data-category="textiles">
+                            🧶
+                            <span>Textiles</span>
+                        </button>
+
+                        <button class="category-btn" data-category="bamboo">
+                            🧺
+                            <span>Bamboo</span>
+                        </button>
+
+                        <button class="category-btn" data-category="wood">
+                            🪵
+                            <span>Wood Craft</span>
+                        </button>
+
+                        <button class="category-btn" data-category="jewellery">
+                            💍
+                            <span>Jewellery</span>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+             PRODUCTS
+             ================================================= -->
+
+                <section class="products-section">
+
+                    <div class="section-title-row">
+
+                        <div>
+
+                            <p class="marketplace-eyebrow">
+                                HANDPICKED FOR YOU
+                            </p>
+
+                            <h2>
+                                Popular Crafts
+                            </h2>
+
+                        </div>
+
+                        <span id="productResultCount">
+                            6 products
+                        </span>
+
+                    </div>
+
+
+                    <div class="buyer-product-grid" id="buyerProductGrid">
+
+
+                        <!-- PRODUCT 1 -->
+
+                        <article class="buyer-product-card" data-category="pottery"
+                            data-name="Terracotta Decorative Pot">
+
+                            <div class="buyer-product-image">
+                                🏺
+
+                                <span class="product-badge">
+                                    Handmade
+                                </span>
+
+                            </div>
+
+
+                            <div class="buyer-product-info">
+
+                                <small>
+                                    POTTERY & CERAMICS
+                                </small>
+
+                                <h3>
+                                    Terracotta Decorative Pot
+                                </h3>
+
+                                <p>
+                                    Traditional handmade terracotta
+                                    piece crafted by local artisans.
+                                </p>
+
+                                <div class="buyer-product-bottom">
+
+                                    <strong>
+                                        ₹450
+                                    </strong>
+
+                                    <button class="cart-add-btn" data-product="Terracotta Decorative Pot"
+                                        data-price="450">
+                                        + Cart
+                                    </button>
+
+                                </div>
+
+                                <button class="buy-now-btn" data-product="Terracotta Decorative Pot">
+                                    Buy Now →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 2 -->
+
+                        <article class="buyer-product-card" data-category="textiles" data-name="Handwoven Cotton Saree">
+
+                            <div class="buyer-product-image textile-product">
+                                🧶
+
+                                <span class="product-badge">
+                                    Artisan Pick
+                                </span>
+
+                            </div>
+
+
+                            <div class="buyer-product-info">
+
+                                <small>
+                                    HANDLOOM & TEXTILES
+                                </small>
+
+                                <h3>
+                                    Handwoven Cotton Saree
+                                </h3>
+
+                                <p>
+                                    Carefully woven cotton saree with
+                                    traditional artisan patterns.
+                                </p>
+
+                                <div class="buyer-product-bottom">
+
+                                    <strong>
+                                        ₹1,200
+                                    </strong>
+
+                                    <button class="cart-add-btn" data-product="Handwoven Cotton Saree"
+                                        data-price="1200">
+                                        + Cart
+                                    </button>
+
+                                </div>
+
+                                <button class="buy-now-btn" data-product="Handwoven Cotton Saree">
+                                    Buy Now →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 3 -->
+
+                        <article class="buyer-product-card" data-category="bamboo" data-name="Bamboo Storage Basket">
+
+                            <div class="buyer-product-image bamboo-product">
+                                🧺
+
+                                <span class="product-badge">
+                                    Natural
+                                </span>
+
+                            </div>
+
+
+                            <div class="buyer-product-info">
+
+                                <small>
+                                    BAMBOO & CANE
+                                </small>
+
+                                <h3>
+                                    Bamboo Storage Basket
+                                </h3>
+
+                                <p>
+                                    Eco-friendly handmade basket for
+                                    everyday storage and decor.
+                                </p>
+
+                                <div class="buyer-product-bottom">
+
+                                    <strong>
+                                        ₹350
+                                    </strong>
+
+                                    <button class="cart-add-btn" data-product="Bamboo Storage Basket" data-price="350">
+                                        + Cart
+                                    </button>
+
+                                </div>
+
+                                <button class="buy-now-btn" data-product="Bamboo Storage Basket">
+                                    Buy Now →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 4 -->
+
+                        <article class="buyer-product-card" data-category="wood"
+                            data-name="Handcrafted Wooden Elephant">
+
+                            <div class="buyer-product-image wood-product">
+                                🐘
+
+                                <span class="product-badge">
+                                    Traditional
+                                </span>
+
+                            </div>
+
+
+                            <div class="buyer-product-info">
+
+                                <small>
+                                    WOOD CRAFT
+                                </small>
+
+                                <h3>
+                                    Handcrafted Wooden Elephant
+                                </h3>
+
+                                <p>
+                                    Traditional wooden artwork crafted
+                                    by skilled artisans.
+                                </p>
+
+                                <div class="buyer-product-bottom">
+
+                                    <strong>
+                                        ₹650
+                                    </strong>
+
+                                    <button class="cart-add-btn" data-product="Handcrafted Wooden Elephant"
+                                        data-price="650">
+                                        + Cart
+                                    </button>
+
+                                </div>
+
+                                <button class="buy-now-btn" data-product="Handcrafted Wooden Elephant">
+                                    Buy Now →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 5 -->
+
+                        <article class="buyer-product-card" data-category="jewellery"
+                            data-name="Handmade Artisan Necklace">
+
+                            <div class="buyer-product-image jewellery-product">
+                                💍
+
+                                <span class="product-badge">
+                                    New
+                                </span>
+
+                            </div>
+
+
+                            <div class="buyer-product-info">
+
+                                <small>
+                                    JEWELLERY
+                                </small>
+
+                                <h3>
+                                    Handmade Artisan Necklace
+                                </h3>
+
+                                <p>
+                                    Unique handcrafted jewellery inspired
+                                    by traditional Indian art.
+                                </p>
+
+                                <div class="buyer-product-bottom">
+
+                                    <strong>
+                                        ₹850
+                                    </strong>
+
+                                    <button class="cart-add-btn" data-product="Handmade Artisan Necklace"
+                                        data-price="850">
+                                        + Cart
+                                    </button>
+
+                                </div>
+
+                                <button class="buy-now-btn" data-product="Handmade Artisan Necklace">
+                                    Buy Now →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 6 -->
+
+                        <article class="buyer-product-card" data-category="pottery" data-name="Handmade Clay Diya Set">
+
+                            <div class="buyer-product-image diya-product">
+                                🪔
+
+                                <span class="product-badge">
+                                    Handmade
+                                </span>
+
+                            </div>
+
+
+                            <div class="buyer-product-info">
+
+                                <small>
+                                    POTTERY & CERAMICS
+                                </small>
+
+                                <h3>
+                                    Handmade Clay Diya Set
+                                </h3>
+
+                                <p>
+                                    Beautiful handmade clay diyas for
+                                    festive and home decoration.
+                                </p>
+
+                                <div class="buyer-product-bottom">
+
+                                    <strong>
+                                        ₹280
+                                    </strong>
+
+                                    <button class="cart-add-btn" data-product="Handmade Clay Diya Set" data-price="280">
+                                        + Cart
+                                    </button>
+
+                                </div>
+
+                                <button class="buy-now-btn" data-product="Handmade Clay Diya Set">
+                                    Buy Now →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </section>
+
+
+        <!-- =====================================================
+     BUYER ACCOUNT PAGE
+     ===================================================== -->
+
+        <section class="page buyer-simple-page" id="buyerAccountPage">
+
+            <header class="buyer-topbar simple-buyer-topbar">
+
+                <button class="buyer-brand" data-go="buyerHomePage">
+
+                    <img src="karigo-logo.png" alt="Karigo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+            </header>
+
+
+            <main class="buyer-simple-main">
+
+                <div class="buyer-profile-card">
+
+                    <div class="profile-circle">
+                        👤
+                    </div>
+
+                    <p class="marketplace-eyebrow">
+                        MY ACCOUNT
+                    </p>
+
+                    <h1>
+                        Your <span>Profile</span>
+                    </h1>
+
+                    <div class="buyer-profile-details">
+
+                        <div>
+                            <small>NAME</small>
+                            <strong>Buyer Name</strong>
+                        </div>
+
+                        <div>
+                            <small>MOBILE NUMBER</small>
+                            <strong>+91 XXXXX XXXXX</strong>
+                        </div>
+
+                        <div>
+                            <small>EMAIL</small>
+                            <strong>buyer@example.com</strong>
+                        </div>
+
+                    </div>
+
+                    <button class="back-marketplace-btn" data-go="buyerHomePage">
+                        ← Back to Marketplace
+                    </button>
+
+                </div>
+
+            </main>
+
+        </section>
+
+        <!-- =====================================================
+     BUYER CART PAGE
+     ===================================================== -->
+
+        <section class="page buyer-simple-page" id="buyerCartPage">
+
+            <header class="buyer-topbar simple-buyer-topbar">
+
+                <button class="buyer-brand" data-go="buyerHomePage">
+
+                    <img src="karigo-logo.png" alt="Karigo">
+
+                    <span>KARIGO</span>
+
+                </button>
+
+            </header>
+
+
+            <main class="cart-main">
+
+                <div class="cart-heading">
+
+                    <p class="marketplace-eyebrow">
+                        YOUR SHOPPING BAG
+                    </p>
+
+                    <h1>
+                        My <span>Cart</span>
+                    </h1>
+
+                </div>
+
+
+                <div class="cart-container" id="cartContainer">
+
+                    <!-- JavaScript will add products here -->
+
+                </div>
+
+
+                <div class="cart-summary" id="cartSummary">
+
+                    <div>
+
+                        <span>Total</span>
+
+                        <strong id="cartTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <button class="checkout-btn" id="checkoutBtn">
+                        Proceed to Checkout →
+                    </button>
+
+                </div>
+
+            </main>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js?v=20260923"></script>
+</body>
+
+</html>
