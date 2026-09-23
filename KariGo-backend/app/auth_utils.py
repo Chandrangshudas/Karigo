@@ -11,8 +11,11 @@ pwd_context = CryptContext(
 )
 
 
-# JWT settings
-SECRET_KEY = "karigo-super-secret-key-change-this-later"
+# JWT settings.  Keep this outside source control because it signs every login
+# token issued by the API.
+SECRET_KEY = os.getenv("JWT_SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError("JWT_SECRET_KEY is not configured. Add it to the backend .env file.")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 

@@ -4,6 +4,7 @@ KariGo-backend/venv/
 KariGo-backend/__pycache__/
 KariGo-backend/app/**/__pycache__/
 KariGo-backend/*.db
+KariGo-backend/*.log
 
 # Frontend editor/runtime files
 karigo/.vscode/

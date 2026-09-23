@@ -5,7 +5,7 @@ The frontend is in `karigo` and the FastAPI backend is in `KariGo-backend`.
 ## Start the backend
 
 1. Ensure PostgreSQL is running and create a database named `karigo`.
-2. Copy `KariGo-backend/.env.example` to `KariGo-backend/.env`, then set the real database and service credentials. An existing `.env` is already present locally; keep it private.
+2. Copy `KariGo-backend/.env.example` to `KariGo-backend/.env`, then set the real database and service credentials, including a long random `JWT_SECRET_KEY`. An existing `.env` is already present locally; keep it private.
 3. In PowerShell, start the API:
 
 ```powershell
