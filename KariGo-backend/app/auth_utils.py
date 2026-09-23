@@ -1,14 +1,14 @@
 import os
 from datetime import datetime, timedelta, timezone
 from jose import jwt
-from passlib.context import CryptContext
+import bcrypt
 
+def verify_password(plain_password, hashed_password):
+    return bcrypt.checkpw(
+        plain_password.encode("utf-8"),
+        hashed_password.encode("utf-8")
+    )
 
-# Password hashing
-pwd_context = CryptContext(
-    schemes=["bcrypt"],
-    deprecated="auto"
-)
 
 # JWT settings.  Keep this outside source control because it signs every login
 # token issued by the API.
@@ -19,11 +19,6 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(
-        plain_password,
-        hashed_password
-    )
 
 
 def create_access_token(data: dict):
