@@ -1,5 +1,5 @@
+import os
 from datetime import datetime, timedelta, timezone
-
 from jose import jwt
 from passlib.context import CryptContext
 
@@ -9,7 +9,6 @@ pwd_context = CryptContext(
     schemes=["bcrypt"],
     deprecated="auto"
 )
-
 
 # JWT settings.  Keep this outside source control because it signs every login
 # token issued by the API.
